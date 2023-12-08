@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Handle preflight requests for the /login route
 app.options('/login', cors());
@@ -63,7 +63,7 @@ app.post('/refresh', cors(), async (req, res) => {
     }
 });
 
-app.listen(port, "0.0.0.0", err => {
+app.listen(PORT, "0.0.0.0", err => {
     if(err) {
         console.log(err);
     }
