@@ -14,6 +14,7 @@ const port = process.env.PORT || 3001;
 
 app.post("/login", async (req, res) => {
     const { code } = req.body;
+    console.log("post:", code);
     const spotifyApi = new SpotifyWebApi({
         redirectUri: process.env.REDIRECT_URI,
         clientId: process.env.CLIENT_ID,
