@@ -27,10 +27,11 @@ app.post("/login", async (req, res) => {
 
         res.json({ access_token, refresh_token, expires_in });
     } catch (err) {
-        console.log(err);
-        res.sendStatus(400);
+        console.error(err);
+        res.status(400).json({ error: 'Bad Request', details: err.message });
     }
 });
+
 
 app.post("/refresh", async (req, res) => {
     const { refreshToken } = req.body;
