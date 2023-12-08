@@ -6,11 +6,13 @@ import SpotifyWebApi from "spotify-web-api-node";
 const app = express();
 dotenv.config();
 
-// Enable CORS for specific origins
 app.use(cors({
     origin: 'https://jukebox-production.up.railway.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
 }));
-
+app.options('/login', cors()); // Adjust this based on your route
+app.options('/refresh', cors()); // Adjust this based on your route
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
