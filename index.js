@@ -63,7 +63,7 @@ app.post('/refresh', cors(), async (req, res) => {
     }
 });
 
-app.listen("0.0.0.0", err => {
+app.listen(port, "0.0.0.0", err => {
     if(err) {
         console.log(err);
     }
