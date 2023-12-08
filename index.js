@@ -1,7 +1,7 @@
-const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv');
-const SpotifyWebApi = require('spotify-web-api-node');
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import SpotifyWebApi from "spotify-web-api-node";
 
 const app = express();
 dotenv.config();
