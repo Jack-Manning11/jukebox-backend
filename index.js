@@ -6,9 +6,7 @@ import SpotifyWebApi from "spotify-web-api-node";
 const app = express();
 dotenv.config();
 
-// Enable CORS for all routes
 app.use(cors());
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
