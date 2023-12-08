@@ -5,9 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "server": "node index.js",
-    "client": "cd ../client && npm start"
+    "start": "npm run server",
+    "server": "node index.js"
   },
   "keywords": [],
   "author": "",
