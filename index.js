@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 
 const port = process.env.PORT || 3001;
 
+console.log(process.env.REDIRECT_URI);
+
 app.post("/login", async (req, res) => {
     const { code } = req.body;
     console.log("post:", code);
